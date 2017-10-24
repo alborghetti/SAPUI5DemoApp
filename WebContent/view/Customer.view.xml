@@ -1,0 +1,36 @@
+<core:View controllerName="it.interlem.sapui5TrainingTrainingDemo.controller.Customer"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:semantic="sap.m.semantic">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack"
+		showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="{CompanyName}">
+			</ObjectHeader>
+			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://hint"
+						tooltip="{i18n>detailIconTabBarInfo}">
+						<mvc:XMLView viewName="it.interlem.sapui5TrainingTrainingDemo.view.Info" />
+					</IconTabFilter>
+					<IconTabFilter id="iconTabBarFilter2" icon="sap-icon://sales-order"
+						tooltip="{i18n>detailIconTabBarOrders}">
+						<mvc:XMLView viewName="it.interlem.sapui5TrainingTrainingDemo.view.Orders" />
+					</IconTabFilter>
+					<IconTabFilter id="iconTabBarFilter3" icon="sap-icon://bar-chart"
+						tooltip="{i18n>detailIconTabBarStatistics}">
+ 						<mvc:XMLView viewName="it.interlem.sapui5TrainingTrainingDemo.view.Statistics" /> 
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+
+		</semantic:content>
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail"
+				press="onShareEmailPress" />
+		</semantic:sendEmailAction>
+
+	</semantic:DetailPage>
+</core:View>

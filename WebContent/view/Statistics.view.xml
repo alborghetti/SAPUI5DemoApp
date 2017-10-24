@@ -1,0 +1,18 @@
+<mvc:View controllerName="it.interlem.sapui5TrainingTrainingDemo.controller.Statistics"
+	xmlns="sap.suite.ui.commons" xmlns:m="sap.m" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	height="100%">
+	<ChartContainer id="chartContainer" showFullScreen="true"
+		showPersonalization="false" autoAdjustHeight="false" title="{i18n>salesByMonth}">
+		<content>
+			<ChartContainerContent icon="sap-icon://line-chart"
+				title="Line Chart">
+				<content>
+					<viz:Popover id="idPopOver"></viz:Popover>
+					<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+						vizType='timeseries_column' />
+				</content>
+			</ChartContainerContent>
+		</content>
+	</ChartContainer>
+</mvc:View>

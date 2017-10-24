@@ -1,0 +1,79 @@
+<core:View controllerName="it.interlem.sapui5TrainingTrainingDemo.controller.Info"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+
+	<VBox class="sapUiSmallMargin">
+		<f:Form id="FormDisplayAddress" editable="false">
+			<f:title>
+				<core:Title text="{i18n>detailFormAddress}" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout labelSpanXL="3"
+					labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false"
+					emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+					columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="{i18n>detailFormName}">
+							<f:fields>
+								<Text text="{CompanyName}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>detailFormStreet}">
+							<f:fields>
+								<Text text="{Address}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>detailFormCity}">
+							<f:fields>
+								<Text text="{PostalCode} {City}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>detailFormCountry}">
+							<f:fields>
+								<Text text="{Country}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+		<f:Form id="FormDisplayContact" editable="false">
+			<f:title>
+				<core:Title text="{i18n>detailFormContact}" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout labelSpanXL="3"
+					labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false"
+					emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+					columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="{i18n>detailFormContactName}">
+							<f:fields>
+								<Text text="{ContactName}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>detailFormContactTel}">
+							<f:fields>
+								<Text text="{Phone}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>detailFormContactFax}">
+							<f:fields>
+								<Text text="{Fax}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+
+
+
+</core:View>
